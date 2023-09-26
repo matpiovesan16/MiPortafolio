@@ -22,22 +22,24 @@
   </head>
   <body class="font-sans">
     <header class="h-screen flex flex-col justify-between w-full max-sm:justify-center">
-      <div class="flex justify-between w-full p-9 max-sm:fixed max-sm:top-0 max-sm:bg-slate-900 max-sm:z-10">
+      <div class="flex justify-between w-full p-9 max-sm:fixed max-sm:top-0 max-sm:bg-slate-900 max-sm:z-10" id="cajaMenu">
         <div
-          class="hover:opacity-50 font-bold text-slate-200 cursor-pointer text-2xl"
+          class="hover:opacity-50 font-bold text-slate-200 cursor-pointer text-2xl max-sm:text-xl"
         >
-          Matias Piovesan
-          <i class="fa-brands fa-connectdevelop hover:text-slate-200 cursor-pointer"></i>
+        <a href="#">Matias Piovesan
+          <i class="fa-brands fa-connectdevelop hover:text-slate-200 cursor-pointer"></i></a>
+          
         </div>
-        <nav class="text-slate-200 text-xl animate__animated animate__fadeInDown max-sm:hidden">
-          <ul class="flex gap-5">
+        <nav class="text-slate-200 text-xl animate__animated animate__fadeInDown max-sm:flex max-sm:h-full max-sm:flex-col max-sm:justify-center max-sm:hidden" id="navBar">
+          <ul class="flex gap-5 max-sm:text-lg max-sm:flex-col max-sm:items-end max-sm:relative text-rigth">
             <a href="#"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Inicio</li></a>
             <a href="#sobremi"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Sobre mi</li></a>
             <a href="#misproyectos"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Mis Proyectos</li></a>
             <a href=""><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Contacto</li></a>
           </ul>
         </nav>
-        <i class="fa-solid fa-bars text-3xl text-slate-200 sm:hidden cursor-pointer hover:text-opacity-50 animate__animated animate__fadeInRight"></i>
+        <i class="fa-solid fa-bars text-3xl text-slate-200 sm:hidden cursor-pointer hover:text-opacity-50 animate__animated animate__fadeInRight" id="menu"></i>
+        <i class="fa-solid fa-x text-3xl text-slate-200 sm:hidden cursor-pointer hover:text-opacity-50 animate__animated animate__fadeInRight absolute left-[84.5%] hidden" id="menuCerrar"></i>
       </div>
       <div
         class="flex flex-col justify-center text-slate-100 text-center text-6xl justify-self-center h-2/5"
@@ -47,17 +49,20 @@
           Bienvenido a mi <span class="font-bold">Portafolio</span>
         </h3>
         <div class="text-3xl flex gap-4 justify-center p-3 text-slate-600 animate__animated animate__fadeInUp">
-          <i class="fa-brands fa-linkedin hover:text-slate-200 cursor-pointer"></i>
-          <i class="fa-brands fa-github hover:text-slate-200 cursor-pointer" ></i>
-          <i class="fa-solid fa-envelope hover:text-slate-200 cursor-pointer"></i>
-          <i class="fa-brands fa-twitter hover:text-slate-200 cursor-pointer"></i>
+          <a href="https://www.linkedin.com/in/matias-garcia-piovesan-341266147/" target="_blank"><i class="fa-brands fa-linkedin hover:text-slate-200 cursor-pointer"></i></a>
+          <a href="https://github.com/matpiovesan16" target="_blank"><i class="fa-brands fa-github hover:text-slate-200 cursor-pointer" ></i></a>
+          <a href="#contacto"><i class="fa-solid fa-envelope hover:text-slate-200 cursor-pointer"></i></a>
+          <a href="https://twitter.com/MatiasPiovesan" target="_blank"><i class="fa-brands fa-twitter hover:text-slate-200 cursor-pointer"></i></a>
+          
         </div>
       </div>
       <div class="text-slate-600 text-6xl text-center justify-self-center p-9 animate-pulse max-sm:justify-self-end">
         <a href="#sobremi"><i class="fa-solid fa-chevron-down hover:text-slate-200 cursor-pointer animate-bounce"></i></a>
       </div>
+      <div class="relative" id="sobremi"></div>
     </header>
-    <section class="sobremi flex w-full p-9 bg-slate-100 h-[100vh] max-sm:flex-col max-sm:items-center max-sm:h-screen max-sm:p-0 max-sm:w-full" id="sobremi">
+    
+    <section class="sobremi flex w-full p-9 bg-slate-100 h-[100vh] max-sm:flex-col max-sm:items-center max-sm:h-screen max-sm:p-0 max-sm:w-full" >
         <div class="foto w-2/4 flex justify-center p-2 max-sm:order-last max-sm:w-full" data-aos="zoom-in"><img class="h-[450px] max-sm:h-[150px]" src="img/sobremi2.png" alt=""></div>
         <div class="textos w-2/4 flex gap-9 flex-col max-sm:w-full max-sm:order-1 justify-start max-sm:gap-1" data-aos="zoom-in-up">
             <div class="titulo text-4xl max-sm:text-2xl max-sm:w-full max-sm:p-3">
@@ -70,8 +75,7 @@
                 </p>
             </div>
             <div class="flex w-full justify-start gap-5 max-sm:justify-center">
-                <button class="border-solid border-4 rounded-lg border-slate-700 bg-slate-700 text-slate-200 w-40 hover:bg-slate-200 hover:text-slate-700 cursor-pointer">Descargar CV</button>
-
+              <a class="h-full w-40" href="/archivos/GarciaPiovesanMatiasCV.pdf" download="PiovesanMatiasCV.pdf"><button class="border-solid border-4 rounded-lg border-slate-700 bg-slate-700 text-slate-200 w-40 h-full hover:bg-slate-200 hover:text-slate-700 cursor-pointer">Descargar CV</button></a>
                 <button class="border-solid border-4 rounded-lg border-slate-700
                 text-slate-700 bg-slate-200 text-slate-200 w-40 h-12 hover:bg-slate-700 hover:text-slate-200 hover: cursor-pointer">Contactame</button>
             </div>
@@ -112,8 +116,10 @@
     <footer class="flex flex-col justify-center h-[50vh] gap-9 items-center bg-slate-200 text-3xl">
       <div class="text-6xl"><a href="#"><i class="fa-solid fa-chevron-up hover:text-slate-600 cursor-pointer animate-bounce hover:scale-110"></i></a></i></div>
       <div data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom"><i class="fa-brands fa-linkedin hover:text-slate-600 cursor-pointer text-6xl" ></i>
-      <i class="fa-brands fa-github hover:text-slate-600 cursor-pointer text-6xl" ></i></div>
+      data-aos-anchor-placement="top-bottom">
+     <a href="https://www.linkedin.com/in/matias-garcia-piovesan-341266147/" target="_blank"><i class="fa-brands fa-linkedin hover:text-slate-600 cursor-pointer text-6xl" ></i></a>
+      <a href="https://github.com/matpiovesan16" target="_blank"><i class="fa-brands fa-github hover:text-slate-600 cursor-pointer text-6xl" ></i></a>
+    </div>
       <div class="max-sm:text-xl" data-aos="fade-up"
       data-aos-anchor-placement="top-bottom">Matias Piovesan | Desarrollador Web</div>
       <div class="max-sm:text-xl" data-aos="fade-up"
@@ -125,5 +131,7 @@
     <script>
       AOS.init();
     </script>
+
+    <script src="index.js"></script>
   </body>
 </html>
