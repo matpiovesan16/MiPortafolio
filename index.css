@@ -11,3 +11,7 @@ header{
            background-position: center center;
            height: 100vh;
     }
+
+    html {
+        scroll-behavior: smooth;
+      }

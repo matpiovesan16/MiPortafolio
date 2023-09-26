@@ -21,8 +21,8 @@
     <title>Mi portafolio</title>
   </head>
   <body class="font-sans">
-    <header class="h-screen flex flex-col justify-between w-full">
-      <div class="flex justify-between w-full p-9">
+    <header class="h-screen flex flex-col justify-between w-full max-sm:justify-center">
+      <div class="flex justify-between w-full p-9 max-sm:fixed max-sm:top-0 max-sm:bg-slate-900 max-sm:z-10">
         <div
           class="hover:opacity-50 font-bold text-slate-200 cursor-pointer text-2xl"
         >
@@ -31,10 +31,10 @@
         </div>
         <nav class="text-slate-200 text-xl animate__animated animate__fadeInDown max-sm:hidden">
           <ul class="flex gap-5">
-            <li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Inicio</li>
-            <li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Sobre mi</li>
-            <li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Mis Proyectos</li>
-            <li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Contacto</li>
+            <a href="#"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Inicio</li></a>
+            <a href="#sobremi"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Sobre mi</li></a>
+            <a href="#misproyectos"><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Mis Proyectos</li></a>
+            <a href=""><li class="hover:opacity-50 cursor-pointer decoration-slate-200 ease-in duration-100 hover:underline underline-offset-4">Contacto</li></a>
           </ul>
         </nav>
         <i class="fa-solid fa-bars text-3xl text-slate-200 sm:hidden cursor-pointer hover:text-opacity-50 animate__animated animate__fadeInRight"></i>
@@ -53,11 +53,11 @@
           <i class="fa-brands fa-twitter hover:text-slate-200 cursor-pointer"></i>
         </div>
       </div>
-      <div class="text-slate-600 text-6xl text-center justify-self-center p-9 animate-pulse">
-        <i class="fa-solid fa-chevron-down hover:text-slate-200 cursor-pointer animate-bounce"></i>
+      <div class="text-slate-600 text-6xl text-center justify-self-center p-9 animate-pulse max-sm:justify-self-end">
+        <a href="#sobremi"><i class="fa-solid fa-chevron-down hover:text-slate-200 cursor-pointer animate-bounce"></i></a>
       </div>
     </header>
-    <section class="sobremi flex w-full p-9 bg-slate-100 h-[100vh] max-sm:flex-col max-sm:items-center max-sm:h-screen max-sm:p-0 max-sm:w-full">
+    <section class="sobremi flex w-full p-9 bg-slate-100 h-[100vh] max-sm:flex-col max-sm:items-center max-sm:h-screen max-sm:p-0 max-sm:w-full" id="sobremi">
         <div class="foto w-2/4 flex justify-center p-2 max-sm:order-last max-sm:w-full" data-aos="zoom-in"><img class="h-[450px] max-sm:h-[150px]" src="img/sobremi2.png" alt=""></div>
         <div class="textos w-2/4 flex gap-9 flex-col max-sm:w-full max-sm:order-1 justify-start max-sm:gap-1" data-aos="zoom-in-up">
             <div class="titulo text-4xl max-sm:text-2xl max-sm:w-full max-sm:p-3">
@@ -77,10 +77,10 @@
             </div>
         </div>
     </section>
-    <section class="misproyectos bg-slate-50 w-full h-full p-8">
+    <section class="misproyectos bg-slate-50 w-full h-full p-8" id="misproyectos">
         <h1 class="font-bold text-3xl text-slate-600 text-center">Mis Proyectos</h1>
         <div class="proyectos flex w-full p-9 gap-9 justify-center max-sm:flex-col max-sm:items-center">
-            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-left">
                 <div class="logo "><a href=""><img class="w-auto" src="img/proyecto1.png" alt=""></a></div>
                 <div class="titulo text-center font-bold text-xl">Menu lo del Cordero</div>
                 <div class="descripcion text-justify text-slate-500"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur error labore, mollitia atque accusantium corrupti dignissimos enim eius. Mollitia laborum repellat vel illum voluptatum voluptates vero assumenda iste iusto?</p></div>
@@ -89,7 +89,7 @@
                     <i class="fa-solid fa-link hover:text-slate-200 cursor-pointer" ></i>
                 </div>
             </div>
-            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-up">
                 <div class="logo flex justify-center"><a href=""><img class="h-40" src="img/proyecto2.png" alt=""></a></div>
                 <div class="titulo text-center font-bold text-xl">BlackFish Tattoo</div>
                 <div class="descripcion text-justify text-slate-500"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur error labore, mollitia atque accusantium corrupti dignissimos enim eius. Mollitia laborum repellat vel illum voluptatum voluptates vero assumenda iste iusto?</p></div>
@@ -98,7 +98,7 @@
                     <i class="fa-solid fa-link hover:text-slate-200 cursor-pointer" ></i>
                 </div>
             </div>
-            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-right" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+            <div class="flex flex-col w-80 shadow-2xl rounded-lg p-3 gap-5" data-aos="flip-right">
                 <div class="logo "><a href=""><img class="w-auto" src="img/proyecto4.jpg" alt=""></a></div>
                 <div class="titulo text-center font-bold text-xl">Gymnacio O2</div>
                 <div class="descripcion text-justify text-slate-500"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur error labore, mollitia atque accusantium corrupti dignissimos enim eius. Mollitia laborum repellat vel illum voluptatum voluptates vero assumenda iste iusto?</p></div>
@@ -110,14 +110,14 @@
         </div>
     </section>
     <footer class="flex flex-col justify-center h-[50vh] gap-9 items-center bg-slate-200 text-3xl">
-      <div class="text-6xl"><i class="fa-solid fa-chevron-up hover:text-slate-600 cursor-pointer animate-bounce hover:scale-110"></i></div>
+      <div class="text-6xl"><a href="#"><i class="fa-solid fa-chevron-up hover:text-slate-600 cursor-pointer animate-bounce hover:scale-110"></i></a></i></div>
       <div data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"><i class="fa-brands fa-linkedin hover:text-slate-600 cursor-pointer text-6xl" ></i>
       <i class="fa-brands fa-github hover:text-slate-600 cursor-pointer text-6xl" ></i></div>
       <div class="max-sm:text-xl" data-aos="fade-up"
       data-aos-anchor-placement="top-bottom">Matias Piovesan | Desarrollador Web</div>
       <div class="max-sm:text-xl" data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom">Copyrigth 2023. All rights are reserved</div>
+      data-aos-anchor-placement="top-bottom">Copyrigth &copy; 2023. All rights are reserved</div>
     </footer>
 
 
