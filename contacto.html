@@ -33,10 +33,10 @@
       <div class="flex h-[80vh] p-5 flex-col items-center">
         <h1 class="font-bold text-3xl">Contactame</h1>
 
-        <form action="" class="flex flex-col w-[95%] shadow-2xl rounded-lg gap-1 p-7 justify-around items-center h-[80%]">
-            <p><input type="text" placeholder="Nombre"></p>
-            <p><input type="email" placeholder="Mail"></p>
-            <p><input type="text" placeholder="Dejame tu mensaje"></p>
+        <form  method="POST" action="/php/EnviarMail.php" name="emailForm" enctype="multipart/form-data" class="flex flex-col w-[95%] shadow-2xl rounded-lg gap-1 p-7 justify-around items-center h-[80%]" accept-charset="UTF-8">
+            <p><input type="text" name="name"  id="name" maxlength="40" placeholder="Nombre" required></p>
+            <p><input type="email" name="email" id="email" maxlength="40" placeholder="Mail"></p>
+            <p><textarea type="text" name="message" id="message" maxlength="500" placeholder="Dejame tu mensaje"></textarea></p>
             <div class="flex gap-3 flex-wrap items-center justify-center w-full">
                 <input type="submit" value="Enviar" class="border-solid border-4 rounded-lg border-slate-700
                 text-slate-700 bg-slate-200 text-slate-200 w-40 h-12 hover:bg-slate-700 hover:text-slate-200 hover: cursor-pointer">
